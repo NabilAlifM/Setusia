@@ -1,67 +1,49 @@
-ADMIN LOGIN FOR JURY:
-- Email: admin@setusia.com
-- Password: password
+# 👟 Setusia - E-Commerce Platform
 
---------------------------------------------------
-DAFTAR FITUR YANG BERHASIL DISELESAIKAN:
---------------------------------------------------
-1.  Frontend Architecture (React 18 + Vite)
-    - Single Page Application (SPA) dengan Framer Motion untuk animasi.
-    - Responsive Design (Mobile-first).
-    - Custom UI Components (Header, Footer, Product Card, Modals).
 
-2.  Product Catalog
-    - Grid view produk yang dinamis.
-    - Filter kategori dan pencarian.
-    - Halaman detail produk lengkap.
 
-3.  User Interaction Features
-    - Wishlist: Menyimpan produk favorit (Persistensi LocalStorage).
-    - Comparison Tool: Membandingkan 2 produk sepatu secara side-by-side.
-    - Notify Out-of-Stock: Modal pengingat stok (LocalStorage logic).
+**Setusia** adalah platform e-commerce modern yang dirancang khusus untuk penjualan produk sepatu premium. Dibangun dengan fokus pada kecepatan, desain bersih, dan pengalaman pengguna yang intuitif.
 
-4.  Backend API (Laravel 11)
-    - RESTful API untuk data produk dan autentikasi.
-    - Laravel Sanctum untuk keamanan token admin.
+---
 
-5.  Admin Panel (Full CRUD)
-    - Autentikasi Admin (Login/Logout).
-    - Manajemen Produk: Tambah, Lihat, Edit, dan Hapus data produk.
-    - Image Cloud/Local Upload: Sistem penyimpanan gambar produk.
+## 🚀 Main Feature
 
-6.  Activity Logs
-    - Pencatatan otomatis setiap ada perubahan (tambah/edit/hapus) di sisi admin untuk transparansi data.
+* **🛍️ Wishlist System Without Login:** Penambahan produk ke keranjang secara real-time dengan manajemen jumlah (qty).
+* **🔍 Advanced Filtering:** Pencarian sepatu berdasarkan kategori, ukuran, merk, dan rentang harga.
+* **📱 Responsive Design:** Pengalaman belanja yang mulus baik di desktop maupun perangkat mobile (Mobile First).
+* **📊 Admin Dashboard:** Manajemen stok produk, pemantauan pesanan, dan statistik penjualan.
 
---------------------------------------------------
-PANDUAN INSTALASI & MENJALANKAN APLIKASI:
---------------------------------------------------
-Prasyarat:
-- PHP >= 8.2 & Composer
-- Node.js & npm
-- MySQL (XAMPP/Laragon/Native)
+---
 
-Langkah-langkah:
+## 🛠️ Tech Stack
 
-1. Setup Backend (Laravel):
-   - Buka terminal dan masuk ke direktori: cd laravel-app
-   - Install dependensi: composer install
-   - Buat database baru di MySQL dengan nama: setusia
-   - Salin file .env: cp .env.example .env (jika belum ada)
-   - Generate key: php artisan key:generate
-   - Jalankan migrasi dan seeder: php artisan migrate --seed
-   - Jalankan server: php artisan serve (biasanya jalan di http://127.0.0.1:8000)
+| Bagian | Teknologi |
+| :--- | :--- |
+| **Frontend** | React.js |
+| **Styling** | Tailwind CSS |
+| **State Management** | Context API / Zustand |
+| **Backend** | Laravel |
+| **Database** | MySQL |
+| **Tools** | Git, Composer, NPM, Visual Studio Code|
 
-2. Setup Frontend (React + Vite):
-   - Buka terminal baru dan masuk ke direktori: cd frontend
-   - Install dependensi: npm install
-   - Jalankan frontend: npm run dev
+---
 
-3. Akses Aplikasi:
-   - Frontend (Customer): http://localhost:5173
-   - Admin Panel: http://localhost:5173/admin
+## 📂 Project Structure & Logic
 
---------------------------------------------------
-CATATAN PENGEMBANGAN:
---------------------------------------------------
-- Fitur Payment Gateway dan Checkout saat ini masih dalam tahap pengembangan.
-- Beberapa tombol di menu bantuan dan bantuan footer akan memunculkan notifikasi "Masih dalam pengembangan" karena masih dalam tahap pembangunan tahap selanjutnya.
+Proyek ini mengikuti arsitektur modular untuk memisahkan logika bisnis dengan tampilan:
+
+* **`components/`**: UI Reusable seperti Button, Navbar, dan ProductCard.
+* **`pages/`**: Menangani routing utama (Home, Shop, Cart, Detail).
+* **`store/`**: Logika Global State untuk mengelola data keranjang belanja secara sinkron.
+* **`services/`**: Menangani komunikasi data dengan API (Axios/Fetch).
+
+---
+
+## ⚙️ Local Installation
+
+Ikuti langkah berikut untuk menjalankan proyek di komputer Anda:
+
+1. **Clone Repositori**
+   ```bash
+   git clone [https://github.com/NabilAlifM/Setusia.git](https://github.com/NabilAlifM/Setusia.git)
+   cd Setusia
